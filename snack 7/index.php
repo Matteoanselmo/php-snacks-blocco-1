@@ -41,6 +41,7 @@
     <?php
         foreach($students as $value){
             echo '<p>' . $value['name'] . ' ' . $value['lastname'] . ' ' .  '</p>';
+            echo '<p>' . 'media: '. array_sum($value['votes']) / count($value['votes'])  .'</p>';
             foreach($value['votes'] as $vote){
                 echo $vote . ' ';
             }
